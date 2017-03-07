@@ -5,7 +5,7 @@ In order to run the application do the following steps:
 1. Clone the repository to your local
 2. Run it in your visual studio (VS2015 )
 3. Make sure you have SQl Server instance  installed and running in your machine
-     3.1 . Modify the Connection String in the Web.Copnfig/ App.Config to point to your machine
+     3.1 . Modify the Connection String in the Web.Copnfig/ App.Config to point to the database instance in your machine
 4. Run the application in visual studio.Upload the CSV file, download the CSV file from the application, enjoy it.
 5.Create a CSV file with the following structure.
 

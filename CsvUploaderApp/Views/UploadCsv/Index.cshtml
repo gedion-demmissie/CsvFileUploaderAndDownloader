@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>DAG for Uplading CSV files</h1>
+    <p class="lead">This application helps to upload Csv files with DAG(representing Directed Acyclic Graph), and then make the uploaded contents availible to dowlod.</p>
+    @using (Html.BeginForm("FileUpload", "UploadCsv",
+                        null, FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal smart-green" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+        <label for="file">Upload Image:</label>
+        <input type="file" name="fileBase" id="file" /><br><br>
+        <input type="submit" class="btn btn-primary btn-lg" value="Upload Image" />
+        <br><br>
+        @ViewBag.Message
+    }
+</div>

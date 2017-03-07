@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Available File to Download";
+}
+@model List<CsvUploaderApp.Models.CsvFileContentModel>
+<h2>Csv File with the content representing Tree Like Structure</h2>
+@if (ViewBag.IsDownLoadAvailable != null && ViewBag.IsDownLoadAvailable)
+{
+    <div>Download Content is Available, just click download link to obtain it</div>
+    <table>
+        <thead>
+        <tr>
+            <th style="text-align: center">FileName</th>
+            <th style="text-align: center">Url</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+          @foreach (var file in Model)
+          {
+              <tr>
+                  <td>@file.FileName</td>
+                  <td>
+                      @Html.ActionLink("DownLoad", "DownLoad", "UploadCsv", new {@id = @file.Id}, new {@class = "navbar-brand"})
+                  </td>
+              </tr>
+          }
+        </tbody>
+    </table>
+}
+else
+{
+    <div>No Download Content Available yet.</div>
+}
+
+
+

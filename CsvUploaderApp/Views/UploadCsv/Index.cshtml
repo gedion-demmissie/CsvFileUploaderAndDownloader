@@ -10,9 +10,9 @@
     {
         @Html.AntiForgeryToken()
         @Html.ValidationSummary("", new { @class = "text-danger" })
-        <label for="file">Upload Image:</label>
+        <label for="file">Upload CSV File:</label>
         <input type="file" name="fileBase" id="file" /><br><br>
-        <input type="submit" class="btn btn-primary btn-lg" value="Upload Image" />
+        <input type="submit" class="btn btn-primary btn-lg" value="Upload" />
         <br><br>
         @ViewBag.Message
     }

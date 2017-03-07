@@ -8,6 +8,7 @@ In order to run the application do the following steps:
      3.1 . Modify the Connection String in the Web.Copnfig/ App.Config to point to your machine
 4. Run the application in visual studio.Upload the CSV file, download the CSV file from the application, enjoy it.
 5.Create a CSV file with the following structure.
+
 e.g.
 Parent,Child,Quantity
 FPA,PPA,1

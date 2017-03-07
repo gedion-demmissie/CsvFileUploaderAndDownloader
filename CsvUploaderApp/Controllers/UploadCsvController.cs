@@ -26,14 +26,14 @@ namespace CsvUploaderApp.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "CSV-DAG application description page.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "CSV-DAG  contact page.";
 
             return View();
         }

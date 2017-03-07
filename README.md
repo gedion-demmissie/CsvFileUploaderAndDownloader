@@ -3,7 +3,7 @@ A simple web application that will accept the upload of a CSV file. The CSV file
 
 In order to run the application, do the following steps:
 1. Clone the repository to your local
-2. Make sure you have SQl Server instance  installed and running in your machine
+2. Make sure you have Visual Studio (VS2015) and SQl Server instance  installed and running in your machine
   2.1 . Modify the Connection String in the Web.Copnfig/ App.Config to point to the database instance in your machine
 3. Run it in your visual studio (VS2015 ).Upload the CSV file, download the CSV file from the application, enjoy it.
 4.Create a CSV file with the following structure.

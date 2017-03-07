@@ -1,7 +1,7 @@
 # CsvFileUploaderAndDownloader
 A simple web application that will accept the upload of a CSV file. The CSV file will be required as  attachement that represents what should be a tree like structure. The application consumes this CSV file , validate it (reports errors), and then persist it to a strongly typed storage table (SQL Server preferred) so that it may be downloaded at a later time.
 
-In order to run the application do the following steps:
+In order to run the application, do the following steps:
 1. Clone the repository to your local
 2. Run it in your visual studio (VS2015 )
 3. Make sure you have SQl Server instance  installed and running in your machine

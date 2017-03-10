@@ -12,7 +12,7 @@ using Moq;
 namespace CsvUploaderApp.Tests.Controllers
 {
     [TestClass]
-    public class HomeControllerTest
+    public class UploadCsvControllerTest
     {
         [TestMethod]
         public void Index()

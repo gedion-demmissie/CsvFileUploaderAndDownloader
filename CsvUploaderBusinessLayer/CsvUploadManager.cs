@@ -15,7 +15,6 @@ namespace CsvUploaderBusinessLayer
         private readonly CsvFileContent _csvFileContent;
         private Dictionary<string, HashSet<WeightedChildNode>> _adjencyListofCsvContent;
         private  List<string> _backcycleFormingVerticesNames;
-        private  bool _firstCycleDetected;
         private readonly char[] _separationCharacters ={ ',', '\r', '\n' };
 
         public CsvUploadManager(ICsvContentDataRepository iCsvContentDataRepository)
@@ -103,9 +102,9 @@ namespace CsvUploaderBusinessLayer
             var visitedNodes =new Dictionary<string,bool>();
             var recursionStackSimulator = new Dictionary<string, bool>();
 
-            //Reset the container that supposed to hold cycle forming nodes and associated flag
+            //Reset the container that supposed to hold cycle forming nodes
             _backcycleFormingVerticesNames= new List<string>();
-            _firstCycleDetected = false;
+         
             
 
 
@@ -156,14 +155,14 @@ namespace CsvUploaderBusinessLayer
                 visitedNodes[vertexName] = true;
                 recursionStackSimulator[vertexName] = true;
                
-                //If the vertex doesn't have outgoing edge
+                //If the vertex doesn't have any outgoing edge (leaf edge)
                 if (!_adjencyListofCsvContent.ContainsKey(vertexName))
                 {
                     recursionStackSimulator.Remove(vertexName);
                     return false;
                 }
 
-                //Recusrse for all vertices adjecent to the current vertex
+                //Recurse for all vertices adjecent to the current vertex
                 var adjecentVertices = _adjencyListofCsvContent[vertexName];
                   
                 if (adjecentVertices != null)

@@ -9,7 +9,7 @@ namespace CsvUploaderDataAccess
             : base("name=CvscontentsDb")
         {
         }
-        public DbSet<CsvFile> CsvFileContents { get; set; }
+        public virtual DbSet<CsvFile> CsvFileContents { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
